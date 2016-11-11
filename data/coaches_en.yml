@@ -1,0 +1,18 @@
+- first_name: Thomas
+  last_name: Ochman
+  image: Thomas-400.png
+  summary: From online sales to full-time coder
+  testimonial: I can't think of a better way to secure your future
+  cohort_month: November
+  cohort_year: 2015
+  categories:
+    - career changer
+  case_study:
+    - question: Can you talk a little bit about who you are and what your work has been until now?
+      answer: My name is Gustaf Rudholm. I’m 34 years old and I have worked with e-companies since before the last IT crash. I started my journey with the electronics company NetOnNet in 1999 and I was there for seven years. I gained a great deal of experience there with digital commerce and developed as a businessman.
+    - question: In the Fall of 2015, you participated in the Craft Academy bootcamp. What made you decide to learn to code?
+      answer: I have always been fascinated by how digital products are built with just a bunch of numbers, letters and creativity. Even though I hadn’t written any code before, I had used tons of digital products and services and understood the benefits of learning more about programming.
+    - question: What would you say was the most important result of your time with Craft Academy?
+      answer: That I now code more or less full-time and make things that I only could have dreamed about doing before I participated in the bootcamp. I was very close to deciding not to enroll but now I can barely understand how I could have hesitated. Those twelve weeks have proved to be one of the best investments I have made in myself!
+    - question: What advice would you give someone who is thinking about enrolling in the bootcamp?
+      answer: Just do it! I have a hard time thinking of better ways to ensure one’s future. Whether you work as a developer or not, you’ll gain a huge benefit from your experiences with Craft Academy. Code is a global language, as important to understand as English. Without that understanding, it will be very difficult to keep up with the future job market.

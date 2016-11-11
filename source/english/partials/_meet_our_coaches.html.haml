@@ -1,11 +1,30 @@
-%section.backgrounded
+%section.no-padding-bottom.no-min-height
   .container
-    .centred-row
+    .centered-row
       %h2 Meet Our Coaches
-      %img{src: 'http://s3.amazonaws.com/evancarmichael/pictures/Authors/8131/Bo-Mattsson-portrait.jpg', width: '200px'}
-      %p.copy--left
-        Thomas Ochman founded Craft Academy after
-      %img{src: 'http://s3.amazonaws.com/evancarmichael/pictures/Authors/8131/Bo-Mattsson-portrait.jpg', width: '200px'}
-      %p.copy--left
-        Raoul D. has been working with code all his life.
-        //something something you have been working with Craft Academy for how long and what is your background.
+      %p{style: 'max-width: 90% !important;'}
+        The coaches at Craft Academy have decades of combined experience programming and helping others learn how to program. They understand the most important traits to become a successful contributing member of a development team - helping you with your career goals. They are passionate and devoted educators and strive to make every student feel supported. At the same time, you can expect them to push you out of your comfort zone. That's how we learn.
+
+%section.full-slider{style: 'padding: 0px !important;'}
+  .slider
+    - coaches_en.each do | coach |
+      .slide
+        .container
+          .profile-row
+            .image.show-desktop
+              = image_tag("people/#{coach[:image]}")
+            .copy
+              %h4.leader= "coachuated #{coach[:cohort_month]} #{coach[:cohort_year]}"
+              %h2= "#{coach[:first_name]} #{coach[:last_name]}"
+              %h4.subheader= coach[:summary]
+              %blockquote= coach[:testimonial]
+              .button-row.shift-to-bottom
+                %p
+                  - if coach[:case_study]
+                    = link_to "Read #{possessivize(coach[:first_name])} story", "/english/students/#{coachuate_slug(coach)}", class: 'button button--horizontal'
+                  - elsif coach[:case_study_link]
+                    = link_to "Read #{possessivize(coach[:first_name])} story", coach[:case_study_link], class: 'button button--horizontal', target: '_blank'
+                  - if coach[:blog_link]
+                    = link_to "Visit #{possessivize(coach[:first_name])} blog", coach[:blog_link], class: 'button button--horizontal', target: '_blank'
+            .image.hide-desktop.no-padding
+              = image_tag("people/#{coach[:image]}")

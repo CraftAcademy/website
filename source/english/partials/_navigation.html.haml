@@ -22,8 +22,12 @@
   %nav{role: 'navigation'}
     = link_to image_tag('logo/ca_basic_logo_320x40.png'), '/english', class: 'image--brand'
     %ul.navigation-menu
-      %li{ class: current_if_current_page(current_page, '/english/about_us/') }
-        = link_to 'About Us'.mb_chars.upcase, '/english/about_us.html'
+      - if current_page_is_sa?
+        %li{ class: current_if_current_page(current_page, '/english/za/about_us/') }
+          = link_to 'About Us'.mb_chars.upcase, '/english/za/about_us.html'
+      - else
+        %li{ class: current_if_current_page(current_page, '/english/about_us/') }
+          = link_to 'About Us'.mb_chars.upcase, '/english/about_us.html'
       %li{ class: current_if_current_page(current_page, '/english/employers/') }
         = link_to 'Employers'.mb_chars.upcase, '/english/employers.html'
       %li

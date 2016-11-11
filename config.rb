@@ -65,7 +65,7 @@ helpers CurrentPageHelper,
 
 helpers do
   def current_page_is_sa?
-    current_page.url.match(/pretoria|south-africa/)
+    current_page.url.match(/ pretoria|south-africa|za/)
   end
 
   def current_page_is_campaign_page?
@@ -73,7 +73,7 @@ helpers do
   end
 
   def international_pages?
-    current_page.url.match(/international|pretoria|south-africa/)
+    current_page.url.match(/international|pretoria|south-africa|za/)
   end
 end
 

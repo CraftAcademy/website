@@ -28,8 +28,12 @@
         = link_to 'Employers'.mb_chars.upcase, '/english/employers.html'
       %li
         = link_to 'Curriculum'.mb_chars.upcase, '/english/curriculum.html'
-      %li{ class: current_if_current_page(current_page, '/english/payment/') }
-        = link_to 'Prices'.mb_chars.upcase, '/english/payment.html'
+      - if current_page_is_sa?
+        %li{ class: current_if_current_page(current_page, '/english/za/payment/') }
+          = link_to 'Prices'.mb_chars.upcase, '/english/za/payment.html'
+      - else
+        %li{ class: current_if_current_page(current_page, '/english/payment/') }
+          = link_to 'Prices'.mb_chars.upcase, '/english/payment.html'
       %li
         = link_to flag_image(:swedish), '/'
       - if current_page.url == '/english/employers/'
@@ -37,5 +41,7 @@
           = link_to 'Hire'.mb_chars.upcase, config.hire_form_url, class: 'button button--vertical', target: '_blank'
       - else
         %li{ class: current_if_current_page(current_page, '/english/apply/') }
-          = link_to 'Apply'.mb_chars.upcase, config.apply_form_url, class: 'button button--vertical'
-
+          - if current_page_is_sa?
+            = link_to 'Apply'.mb_chars.upcase, config.apply_sa_form_url, class: 'button button--vertical'
+          - else
+            = link_to 'Apply'.mb_chars.upcase, config.apply_form_url, class: 'button button--vertical'

@@ -20,6 +20,7 @@ gem 'puma', '~> 2.7'
 
 group :development, :test do
   gem 'pry'
+  gem 'pry-byebug'
   gem 'rspec'
   gem 'sass'
   gem 'timecop'

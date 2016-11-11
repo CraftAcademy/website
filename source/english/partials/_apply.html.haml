@@ -8,4 +8,7 @@
             We start a new course every eight weeks and continuously review and accept applicants. The application process can take up to two weeks, so please apply in time!
     .button-row
       %p
-        = link_to 'Apply Now', config.apply_form_url, class: 'button button--vertical button--large'
+        - if current_page_is_sa?
+          = link_to 'Apply Now', config.apply_sa_form_url, class: 'button button--vertical button--large'
+        - else
+          = link_to 'Apply Now', config.apply_form_url, class: 'button button--vertical button--large'

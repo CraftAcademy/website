@@ -7,24 +7,16 @@
 
 %section.full-slider{style: 'padding: 0px !important;'}
   .slider
-    - coaches_en.each do | coach |
+    - data.coaches.each do | coach |
       .slide
         .container
           .profile-row
             .image.show-desktop
               = image_tag("people/#{coach[:image]}")
             .copy
-              %h4.leader= "coachuated #{coach[:cohort_month]} #{coach[:cohort_year]}"
+              %h4.leader= "#{coach[:title]}"
               %h2= "#{coach[:first_name]} #{coach[:last_name]}"
-              %h4.subheader= coach[:summary]
-              %blockquote= coach[:testimonial]
-              .button-row.shift-to-bottom
-                %p
-                  - if coach[:case_study]
-                    = link_to "Read #{possessivize(coach[:first_name])} story", "/english/students/#{coachuate_slug(coach)}", class: 'button button--horizontal'
-                  - elsif coach[:case_study_link]
-                    = link_to "Read #{possessivize(coach[:first_name])} story", coach[:case_study_link], class: 'button button--horizontal', target: '_blank'
-                  - if coach[:blog_link]
-                    = link_to "Visit #{possessivize(coach[:first_name])} blog", coach[:blog_link], class: 'button button--horizontal', target: '_blank'
+              %p= coach[:summary]
+              -#%blockquote= coach[:testimonial]
             .image.hide-desktop.no-padding
               = image_tag("people/#{coach[:image]}")

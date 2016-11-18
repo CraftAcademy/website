@@ -16,6 +16,8 @@
             .copy
               %h4.leader= "#{coach[:title]}"
               %h2= "#{coach[:first_name]} #{coach[:last_name]}"
+              - if coach[:testimonial]
+                %blockquote= coach[:testimonial]
               %p= coach[:summary]
               -#%blockquote= coach[:testimonial]
             .image.hide-desktop.no-padding

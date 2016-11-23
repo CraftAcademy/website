@@ -18,11 +18,6 @@ RewriteRule (.*) https://craftacademy.se/english/za [L]
 
 RewriteEngine On
 RewriteCond %{ENV:MM_COUNTRY_CODE} ^ZA$
-RewriteCond %{REQUEST_URI} ^/english
-RewriteRule (.*) https://craftacademy.se/english/za [L]
-
-RewriteEngine On
-RewriteCond %{ENV:MM_COUNTRY_CODE} ^ZA$
 RewriteCond %{REQUEST_URI} ^/english/about_us
 RewriteRule (.*) https://craftacademy.se/english/za/about_us [L]
 

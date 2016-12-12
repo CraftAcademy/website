@@ -120,12 +120,11 @@ redirect 'blog.html', to: 'https://blog.craftacademy.se'
 redirect 'pretoria.html', to: 'south-africa.html'
 redirect 'south-africa.html', to: 'english/za/index.html'
 
-
 activate :deploy do |deploy|
   deploy.method          = :rsync
-  deploy.host            = 'makersacademy.se'
-  deploy.path            = '/var/www/html/newmakers'
-  deploy.user            = 'soundblab'
+  deploy.host            = ENV.fetch('HOST')
+  deploy.path            = ENV.fetch('DEPLOY_PATH')
+  deploy.user            = ENV.fetch('DEPLOY_USER')
   deploy.build_before    = true
   deploy.clean           = true
 end

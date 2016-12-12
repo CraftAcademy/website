@@ -6,7 +6,7 @@ class Intake
   FILE_NAME = File.join('data', 'intakes.yml')
 
   DAYS_IN_WEEK = 7
-  PRECOURSE_LENGTH = 3 * DAYS_IN_WEEK
+  PRECOURSE_LENGTH = 4 * DAYS_IN_WEEK
 
   # We hide courses two days before the precourse starts
   PRECOURSE_BUFFER = 2

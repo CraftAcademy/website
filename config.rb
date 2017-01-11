@@ -64,6 +64,10 @@ helpers CurrentPageHelper,
         StatsHelper
 
 helpers do
+  def page_is_sa_homepage?
+    current_page.url == '/english/za/'
+  end
+
   def current_page_is_sa?
     current_page.url.match(/ pretoria|south-africa|za/)
   end

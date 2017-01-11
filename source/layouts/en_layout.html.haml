@@ -17,6 +17,9 @@
 
     = partial :'social_media_meta'
 
+    - if page_is_sa_homepage?
+      = partial :'facebook_pixel'
+
     -unless current_page_is_sa?
       = partial :'analytics_scripts'
 
